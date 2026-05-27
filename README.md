@@ -138,7 +138,8 @@ Job skill comparison
           ↓
 Match score generation
           ↓
-Recruiter views ranked applicants
+Recruiter views ranked applicants.
+.
 
 ```
 ---
