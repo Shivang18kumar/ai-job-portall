@@ -10,4 +10,5 @@ class JobportalApplicationTests {
 	void contextLoads() {
 	}
 
+
 }
