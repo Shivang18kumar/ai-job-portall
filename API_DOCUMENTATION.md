@@ -1,28 +1,24 @@
 # API Documentation
 
-Base URL:
+## Base URL
 
 ```http
 http://localhost:9090
 ```
 
----
-
 # 🔐 Authentication APIs
 
 ## Register User
 
-```http
-POST /auth/register
-```
+### POST /auth/register
 
 ### Request Body
 
 ```json
 {
-  "name": "Vikash",
-  "email": "vikash@test.com",
-  "password": "1234",
+  "name": "Shivang Kumar",
+  "email": "shivang@test.com",
+  "password": "shivang123",
   "role": "CANDIDATE"
 }
 ```
@@ -37,16 +33,14 @@ POST /auth/register
 
 ## Login User
 
-```http
-POST /auth/login
-```
+### POST /auth/login
 
 ### Request Body
 
 ```json
 {
-  "email": "vikash@test.com",
-  "password": "1234"
+  "email": "shivang@test.com",
+  "password": "shivang123"
 }
 ```
 
@@ -62,9 +56,7 @@ POST /auth/login
 
 ## Create Job
 
-```http
-POST /jobs/create
-```
+### POST /jobs/create
 
 ### Authorization
 
@@ -92,9 +84,7 @@ Bearer Token Required
 
 ## Get All Jobs
 
-```http
-GET /jobs
-```
+### GET /jobs
 
 ### Authorization
 
@@ -119,9 +109,7 @@ Bearer Token Required
 
 ## Apply To Job
 
-```http
-POST /applications/apply/{jobId}
-```
+### POST /applications/apply/{jobId}
 
 ### Authorization
 
@@ -137,9 +125,7 @@ Bearer Token Required
 
 ## Apply With Resume Upload
 
-```http
-POST /applications/apply/{jobId}/resume
-```
+### POST /applications/apply/{jobId}/resume
 
 ### Authorization
 
@@ -157,8 +143,8 @@ file : PDF Resume
 {
   "message": "Application submitted successfully",
   "resumeData": {
-    "name": "Vikash Yadav",
-    "email": "vikash@test.com",
+    "name": "Shivang Kumar",
+    "email": "shivang@test.com",
     "skills": [
       "Java",
       "Spring Boot",
@@ -184,9 +170,7 @@ file : PDF Resume
 
 ## View Applicants
 
-```http
-GET /recruiter/applications
-```
+### GET /recruiter/applications
 
 ### Authorization
 
@@ -209,9 +193,7 @@ Bearer Token Required
 
 ## Shortlist Candidate
 
-```http
-PUT /recruiter/shortlist/{applicationId}
-```
+### PUT /recruiter/shortlist/{applicationId}
 
 ### Authorization
 
@@ -227,9 +209,7 @@ Bearer Token Required
 
 ## Reject Candidate
 
-```http
-PUT /recruiter/reject/{applicationId}
-```
+### PUT /recruiter/reject/{applicationId}
 
 ### Authorization
 
